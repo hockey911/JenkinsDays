@@ -15,7 +15,7 @@ pipeline {
         }
         stage('') {
           steps {
-            sh 'echo hello world'
+            echo 'Hal knows all'
           }
         }
       }
