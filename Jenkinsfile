@@ -26,15 +26,24 @@ pipeline {
       }
     }
     stage('jkl;') {
-      steps {
-        dir(path: 'fart') {
-          echo 'asdf'
+      parallel {
+        stage('jkl;') {
+          steps {
+            dir(path: 'fart') {
+              echo 'asdf'
+            }
+            
+            dir(path: 'fartb') {
+              echo 'lol'
+            }
+            
+          }
         }
-        
-        dir(path: 'fartb') {
-          echo 'lol'
+        stage('fart1') {
+          steps {
+            echo 'fart'
+          }
         }
-        
       }
     }
   }
