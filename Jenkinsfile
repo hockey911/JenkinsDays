@@ -13,11 +13,28 @@ pipeline {
             sh 'java -version'
           }
         }
-        stage('') {
+        stage('error') {
           steps {
             echo 'Hal knows all'
           }
         }
+      }
+    }
+    stage('asdf') {
+      steps {
+        sleep 9
+      }
+    }
+    stage('jkl;') {
+      steps {
+        dir(path: 'fart') {
+          echo 'asdf'
+        }
+        
+        dir(path: 'fartb') {
+          echo 'lol'
+        }
+        
       }
     }
   }
