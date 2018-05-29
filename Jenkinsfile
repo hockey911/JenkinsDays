@@ -37,6 +37,7 @@ pipeline {
               echo 'lol'
             }
             
+            sh 'whomai'
           }
         }
         stage('fart1') {
