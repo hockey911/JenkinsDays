@@ -7,8 +7,17 @@ pipeline {
       }
     }
     stage('SH') {
-      steps {
-        sh 'java -version'
+      parallel {
+        stage('SH') {
+          steps {
+            sh 'java -version'
+          }
+        }
+        stage('') {
+          steps {
+            sh 'echo hello world'
+          }
+        }
       }
     }
   }
